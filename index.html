@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>苏轼 · 生平与经典诗词</title>
+    <title>苏轼 · 生平与经典诗词全集</title>
     <style>
         * {
             margin: 0;
@@ -17,84 +17,98 @@
             color: #2c2418;
         }
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             background: #fffef7;
-            border-radius: 28px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            border-radius: 32px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.05);
             overflow: hidden;
             border: 1px solid #e2d8ca;
         }
         .header {
             background: linear-gradient(135deg, #d9c7a7 0%, #b89a6e 100%);
-            padding: 32px 20px;
+            padding: 36px 20px;
             text-align: center;
             color: white;
         }
         .header h1 {
-            font-size: 2.2rem;
-            letter-spacing: 3px;
-            margin-bottom: 8px;
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
             font-weight: 400;
         }
         .header p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             opacity: 0.9;
             font-style: italic;
         }
         .content {
-            padding: 32px 28px;
+            padding: 36px 30px;
         }
-        /* 生平简介 */
-        .bio {
-            background: #fefaf5;
-            padding: 22px 26px;
-            border-radius: 24px;
-            margin-bottom: 40px;
-            border: 1px solid #ede3d4;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-        }
-        .bio h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #9b7b54;
-            border-left: 5px solid #cbb181;
-            padding-left: 18px;
-            margin-bottom: 18px;
-        }
-        .bio p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            text-align: justify;
-            color: #3e3324;
-        }
-        /* 时间轴标题 */
-        .timeline-title {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #9b7b54;
-            border-left: 5px solid #cbb181;
-            padding-left: 18px;
-            margin: 40px 0 25px 0;
-        }
-        /* 时间轴 */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 3px solid #d4c3aa;
+        /* 生平简介大板块 */
+        .bio-section {
             margin-bottom: 50px;
         }
+        .bio-section h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #9b7b54;
+            border-left: 6px solid #cbb181;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        .bio-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #3e3324;
+            background: #fefaf5;
+            padding: 22px 28px;
+            border-radius: 28px;
+            border: 1px solid #ede3d4;
+            margin-bottom: 30px;
+        }
+        .bio-stage {
+            background: #fff9f0;
+            padding: 18px 24px;
+            border-radius: 24px;
+            margin-top: 20px;
+            border-left: 4px solid #cbb181;
+        }
+        .bio-stage h3 {
+            font-size: 1.4rem;
+            color: #9b7b54;
+            margin-bottom: 12px;
+        }
+        .bio-stage p {
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+        /* 时间轴 */
+        .timeline-title {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #9b7b54;
+            border-left: 6px solid #cbb181;
+            padding-left: 20px;
+            margin: 50px 0 30px 0;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 35px;
+            border-left: 3px solid #d4c3aa;
+        }
         .event {
-            margin-bottom: 32px;
+            margin-bottom: 38px;
             position: relative;
         }
         .event::before {
             content: "";
             position: absolute;
-            left: -40px;
+            left: -44px;
             top: 6px;
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             background: #b28b5e;
             border-radius: 50%;
             border: 2px solid #fffef7;
@@ -102,106 +116,104 @@
         }
         .year {
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #9b7b54;
             margin-bottom: 8px;
             letter-spacing: 1px;
         }
         .desc {
             font-size: 1.05rem;
-            line-height: 1.6;
+            line-height: 1.65;
             color: #3e3324;
             text-align: justify;
             background: #fefcf8;
-            padding: 8px 0;
+            padding: 6px 0;
         }
-        /* 诗词赏析板块标题 */
+        /* 诗词赏析板块 */
         .poetry-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 400;
             color: #9b7b54;
-            border-left: 5px solid #cbb181;
-            padding-left: 18px;
-            margin: 40px 0 25px 0;
+            border-left: 6px solid #cbb181;
+            padding-left: 20px;
+            margin: 50px 0 30px 0;
         }
-        /* 诗词卡片 */
         .poem-card {
             background: #fefcf8;
             border: 1px solid #e8dfd1;
-            border-radius: 28px;
-            padding: 24px 28px;
-            margin-bottom: 32px;
-            transition: all 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border-radius: 32px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
         .poem-name {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 600;
             color: #7a5a3a;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: 2px;
         }
         .poem-author {
             font-size: 1.2rem;
             color: #b28b5e;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             letter-spacing: 1px;
         }
         .poem-text {
-            font-size: 1.15rem;
-            line-height: 1.8;
+            font-size: 1.2rem;
+            line-height: 1.9;
             color: #2c2418;
             white-space: pre-line;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             font-family: inherit;
             background: #f9f5ed;
-            padding: 18px 20px;
-            border-radius: 20px;
+            padding: 20px 24px;
+            border-radius: 24px;
         }
         .poem-note {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1.05rem;
+            line-height: 1.7;
             color: #5c4b32;
             background: #fff9f0;
-            padding: 14px 18px;
-            border-radius: 20px;
-            border-left: 4px solid #d9c7a7;
+            padding: 18px 22px;
+            border-radius: 24px;
+            border-left: 5px solid #d9c7a7;
         }
         .poem-note strong {
             color: #9b7b54;
+            font-size: 1.05rem;
         }
         .footer {
             text-align: center;
-            padding: 24px;
-            font-size: 0.85rem;
+            padding: 28px;
+            font-size: 0.9rem;
             color: #9b8a72;
             border-top: 1px solid #ede3d4;
             background: #fefcf8;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .content {
-                padding: 20px 16px;
+                padding: 24px 18px;
             }
             .header h1 {
                 font-size: 1.8rem;
             }
-            .bio p {
+            .bio-text {
                 font-size: 1rem;
+                padding: 18px;
             }
             .desc {
                 font-size: 0.95rem;
             }
             .poem-name {
-                font-size: 1.5rem;
-            }
-            .poem-author {
-                font-size: 1rem;
+                font-size: 1.6rem;
             }
             .poem-text {
                 font-size: 1rem;
+                padding: 16px;
             }
             .poem-note {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -213,69 +225,53 @@
         <p>一蓑烟雨任平生 | 诗酒趁年华</p>
     </div>
     <div class="content">
-        <!-- 第一部分：生平简介 -->
-        <div class="bio">
+        <!-- ========= 生平简介（详细分阶段） ========= -->
+        <div class="bio-section">
             <h2>📜 千古东坡</h2>
-            <p>苏轼（1037年—1101年），字子瞻，号东坡居士，眉州眉山人。北宋文坛领袖，诗、词、文、书、画俱佳。他一生仕途坎坷，屡遭贬谪，却始终豁达乐观，将苦难化为诗篇。其词开豪放一派，与辛弃疾并称“苏辛”；散文与欧阳修并称“欧苏”，为“唐宋八大家”之一。代表作有《念奴娇·赤壁怀古》《定风波》《水调歌头》等。他不仅是一位伟大的文学家，更是一位心系百姓、热爱生活的智者。</p>
+            <div class="bio-text">
+                苏轼（1037年—1101年），字子瞻，号东坡居士，眉州眉山（今四川眉山）人。北宋文坛领袖，诗、词、文、书、画俱佳，是中国历史上少有的全才。他一生仕途坎坷，屡遭贬谪，却始终豁达乐观，将苦难化为不朽诗篇。其词开豪放一派，与辛弃疾并称“苏辛”；散文与欧阳修并称“欧苏”，为“唐宋八大家”之一；书法与黄庭坚、米芾、蔡襄并称“宋四家”。代表作有《念奴娇·赤壁怀古》《定风波》《水调歌头·明月几时有》等。他不仅是一位伟大的文学家，更是一位心系百姓、热爱生活、幽默风趣的智者。
+            </div>
+            <div class="bio-stage">
+                <h3>🌱 少年成才</h3>
+                <p>苏轼生于书香门第，父亲苏洵发奋苦读，对其影响深远。十岁能文，二十岁随父进京应试，以一篇《刑赏忠厚之论》令主考官欧阳修惊叹，以为“避此人出一头地”。</p>
+            </div>
+            <div class="bio-stage">
+                <h3>📌 仕途起伏</h3>
+                <p>初入仕途，曾任凤翔、杭州等地地方官。因反对王安石新法，自请外放。后遭“乌台诗案”，被贬黄州，人生跌入谷底，却在此迎来创作巅峰。</p>
+            </div>
+            <div class="bio-stage">
+                <h3>🍃 黄州蜕变</h3>
+                <p>在黄州，他躬耕东坡，自号“东坡居士”。写下《定风波》《赤壁赋》《念奴娇·赤壁怀古》等千古名篇，完成从文人士大夫到哲人的蜕变。</p>
+            </div>
+            <div class="bio-stage">
+                <h3>🌊 晚年流放</h3>
+                <p>晚年再遭贬谪，远放惠州、儋州。年过六旬，在蛮荒之地办学育人，传播文明。遇赦北归时，百姓夹道欢迎。终老常州，临终自题：“问汝平生功业，黄州惠州儋州”。</p>
+            </div>
         </div>
 
-        <!-- 第二部分：时间轴（详细生平介绍） -->
-        <div class="timeline-title">⏳ 人生行旅</div>
+        <!-- ========= 时间轴（详细生平） ========= -->
+        <div class="timeline-title">⏳ 人生行旅 · 时间轴</div>
         <div class="timeline">
-            <div class="event">
-                <div class="year">1037年</div>
-                <div class="desc">出生于四川眉山。父亲苏洵发奋苦读，对苏轼影响深远。自幼聪慧，十岁能文。</div>
-            </div>
-            <div class="event">
-                <div class="year">1057年</div>
-                <div class="desc">21岁，与弟弟苏辙同榜进士及第。主考官欧阳修大为赞赏，预言“三十年后无人道着我也”。</div>
-            </div>
-            <div class="event">
-                <div class="year">1061年</div>
-                <div class="desc">任凤翔府签判，初涉政坛，关心民生，改革衙前役法。</div>
-            </div>
-            <div class="event">
-                <div class="year">1071年</div>
-                <div class="desc">因反对王安石新法，自请外任杭州通判。在杭州留下无数诗篇，与民同乐。</div>
-            </div>
-            <div class="event">
-                <div class="year">1074年</div>
-                <div class="desc">任密州知州。期间修葺超然台，写下《望江南·春未老》及《江城子·密州出猎》。</div>
-            </div>
-            <div class="event">
-                <div class="year">1079年</div>
-                <div class="desc">“乌台诗案”爆发，被贬为黄州团练副使。人生跌入谷底，却在此创作巅峰，《定风波》《赤壁赋》《念奴娇·赤壁怀古》皆出于此时。</div>
-            </div>
-            <div class="event">
-                <div class="year">1084年</div>
-                <div class="desc">离开黄州，奉诏赴汝州。途中游览庐山，写下《题西林壁》。</div>
-            </div>
-            <div class="event">
-                <div class="year">1089年</div>
-                <div class="desc">再次知杭州。疏浚西湖，修筑苏堤，创办“安乐坊”——中国最早的公立医院。</div>
-            </div>
-            <div class="event">
-                <div class="year">1094年</div>
-                <div class="desc">被贬惠州。年近六旬，依然关心百姓，推广农业技术，写“日啖荔枝三百颗”。</div>
-            </div>
-            <div class="event">
-                <div class="year">1097年</div>
-                <div class="desc">再贬儋州（今海南）。在蛮荒之地办学育人，培养出海南第一位举人。</div>
-            </div>
-            <div class="event">
-                <div class="year">1100年</div>
-                <div class="desc">遇赦北归。百姓夹道欢迎，他却已垂垂老矣。</div>
-            </div>
-            <div class="event">
-                <div class="year">1101年</div>
-                <div class="desc">病逝于常州。临终自题：“问汝平生功业，黄州惠州儋州”。</div>
-            </div>
+            <div class="event"><div class="year">1037年</div><div class="desc">出生于四川眉山。父亲苏洵早年游荡不学，二十七岁始发奋读书，对苏轼兄弟影响深远。</div></div>
+            <div class="event"><div class="year">1057年</div><div class="desc">21岁，与弟弟苏辙同榜进士及第。主考官欧阳修误以为其文为门生曾巩所作，为避嫌列为第二。后欧阳修赞其“读轼书，不觉汗出”，预言“三十年后无人道着我也”。</div></div>
+            <div class="event"><div class="year">1061年</div><div class="desc">任凤翔府签判。初涉政坛，关心民生，改革衙前役法，深受百姓爱戴。</div></div>
+            <div class="event"><div class="year">1071年</div><div class="desc">因反对王安石新法，自请外任杭州通判。在杭州留下大量诗篇，与民同乐，治理西湖。</div></div>
+            <div class="event"><div class="year">1074年</div><div class="desc">任密州知州。期间修葺超然台，写下《望江南·春未老》及《江城子·密州出猎》，“老夫聊发少年狂”开豪放词先声。</div></div>
+            <div class="event"><div class="year">1077年</div><div class="desc">任徐州知州。黄河决口，亲率军民抗洪，保全一城百姓。</div></div>
+            <div class="event"><div class="year">1079年</div><div class="desc">“乌台诗案”爆发，被囚禁百余日，险遭杀身之祸。后被贬为黄州团练副使，不得签书公事。</div></div>
+            <div class="event"><div class="year">1082年</div><div class="desc">在黄州迎来创作巅峰。写下《定风波·莫听穿林打叶声》《赤壁赋》《后赤壁赋》《念奴娇·赤壁怀古》等千古名篇。</div></div>
+            <div class="event"><div class="year">1084年</div><div class="desc">离开黄州，奉诏赴汝州。途中游览庐山，写下《题西林壁》。与王安石在金陵会面，二人尽释前嫌。</div></div>
+            <div class="event"><div class="year">1089年</div><div class="desc">再次知杭州。疏浚西湖，修筑苏堤，创办“安乐坊”——中国最早的公立医院，造福百姓。</div></div>
+            <div class="event"><div class="year">1094年</div><div class="desc">被贬惠州。年近六旬，依然关心民生，推广农业技术，写下“日啖荔枝三百颗，不辞长作岭南人”。</div></div>
+            <div class="event"><div class="year">1097年</div><div class="desc">再贬儋州（今海南）。在蛮荒之地办学育人，培养出海南第一位举人符确。至今儋州仍有“东坡书院”。</div></div>
+            <div class="event"><div class="year">1100年</div><div class="desc">遇赦北归。百姓夹道欢迎，他却已垂垂老矣。渡海时写下“云散月明谁点缀？天容海色本澄清”。</div></div>
+            <div class="event"><div class="year">1101年</div><div class="desc">病逝于常州。临终自题：“问汝平生功业，黄州惠州儋州”。享年六十五岁。</div></div>
         </div>
 
-        <!-- 第三部分：经典诗词赏析（每个诗词一个框，解析参考百度百科，字体加大） -->
+        <!-- ========= 经典诗词赏析（8首，含《望江南》） ========= -->
         <div class="poetry-title">📖 经典诗词赏析</div>
 
-        <!-- 诗词1：望江南·春未老 -->
+        <!-- 1. 望江南·春未老 -->
         <div class="poem-card">
             <div class="poem-name">《望江南·春未老》</div>
             <div class="poem-author">宋 · 苏轼</div>
@@ -293,7 +289,63 @@
             </div>
         </div>
 
-        <!-- 诗词2：饮湖上初晴后雨 -->
+        <!-- 2. 定风波·莫听穿林打叶声 -->
+        <div class="poem-card">
+            <div class="poem-name">《定风波·莫听穿林打叶声》</div>
+            <div class="poem-author">宋 · 苏轼</div>
+            <div class="poem-text">
+                莫听穿林打叶声，何妨吟啸且徐行。<br>
+                竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。<br>
+                料峭春风吹酒醒，微冷，山头斜照却相迎。<br>
+                回首向来萧瑟处，归去，也无风雨也无晴。
+            </div>
+            <div class="poem-note">
+                <strong>🌿 解析（参考百度百科）：</strong><br>
+                此词作于黄州贬所。途中遇雨，同行皆狼狈，唯苏轼泰然处之。词中以“莫听穿林打叶声”开篇，展现不为外物所扰的定力。“一蓑烟雨任平生”道出面对人生风雨的从容。“也无风雨也无晴”更是哲理升华：人生顺逆皆过客，心中平静即晴天。全词即景抒情，将自然风雨与人生际遇融为一体，是苏轼旷达人格的写照。
+            </div>
+        </div>
+
+        <!-- 3. 水调歌头·明月几时有 -->
+        <div class="poem-card">
+            <div class="poem-name">《水调歌头·明月几时有》</div>
+            <div class="poem-author">宋 · 苏轼</div>
+            <div class="poem-text">
+                明月几时有？把酒问青天。<br>
+                不知天上宫阙，今夕是何年。<br>
+                我欲乘风归去，又恐琼楼玉宇，高处不胜寒。<br>
+                起舞弄清影，何似在人间。<br>
+                转朱阁，低绮户，照无眠。<br>
+                不应有恨，何事长向别时圆？<br>
+                人有悲欢离合，月有阴晴圆缺，此事古难全。<br>
+                但愿人长久，千里共婵娟。
+            </div>
+            <div class="poem-note">
+                <strong>🌿 解析（参考百度百科）：</strong><br>
+                丙辰中秋，苏轼欢饮达旦，兼怀子由（弟弟苏辙）。此词上片问天，下片问月，最后以“人有悲欢离合，月有阴晴圆缺”自解，发出“但愿人长久，千里共婵娟”的美好祝愿。全词意境豪放阔大，情感深沉豁达，被誉为“中秋词之千古绝唱”。
+            </div>
+        </div>
+
+        <!-- 4. 念奴娇·赤壁怀古 -->
+        <div class="poem-card">
+            <div class="poem-name">《念奴娇·赤壁怀古》</div>
+            <div class="poem-author">宋 · 苏轼</div>
+            <div class="poem-text">
+                大江东去，浪淘尽，千古风流人物。<br>
+                故垒西边，人道是，三国周郎赤壁。<br>
+                乱石穿空，惊涛拍岸，卷起千堆雪。<br>
+                江山如画，一时多少豪杰。<br>
+                遥想公瑾当年，小乔初嫁了，雄姿英发。<br>
+                羽扇纶巾，谈笑间，樯橹灰飞烟灭。<br>
+                故国神游，多情应笑我，早生华发。<br>
+                人生如梦，一尊还酹江月。
+            </div>
+            <div class="poem-note">
+                <strong>🌿 解析（参考百度百科）：</strong><br>
+                此词是苏轼豪放词的代表作。上片以“大江东去”起兴，描绘赤壁壮丽景色，引出千古英雄。下片聚焦周瑜，写其青年得志、功成名就，反衬自己老大无成。结尾“人生如梦”并非消极，而是看透世事后的旷达。全词气势磅礴，格调雄浑，被誉为“千古绝唱”。
+            </div>
+        </div>
+
+        <!-- 5. 饮湖上初晴后雨 -->
         <div class="poem-card">
             <div class="poem-name">《饮湖上初晴后雨》</div>
             <div class="poem-author">宋 · 苏轼</div>
@@ -307,7 +359,7 @@
             </div>
         </div>
 
-        <!-- 诗词3：题西林壁 -->
+        <!-- 6. 题西林壁 -->
         <div class="poem-card">
             <div class="poem-name">《题西林壁》</div>
             <div class="poem-author">宋 · 苏轼</div>
@@ -321,7 +373,7 @@
             </div>
         </div>
 
-        <!-- 诗词4：惠崇春江晚景 -->
+        <!-- 7. 惠崇春江晚景 -->
         <div class="poem-card">
             <div class="poem-name">《惠崇春江晚景》</div>
             <div class="poem-author">宋 · 苏轼</div>
@@ -335,21 +387,23 @@
             </div>
         </div>
 
-        <!-- 诗词5：六月二十日夜渡海 -->
+        <!-- 8. 六月二十日夜渡海 -->
         <div class="poem-card">
             <div class="poem-name">《六月二十日夜渡海》</div>
             <div class="poem-author">宋 · 苏轼</div>
             <div class="poem-text">
                 参横斗转欲三更，苦雨终风也解晴。<br>
-                云散月明谁点缀？天容海色本澄清。
+                云散月明谁点缀？天容海色本澄清。<br>
+                空余鲁叟乘桴意，粗识轩辕奏乐声。<br>
+                九死南荒吾不恨，兹游奇绝冠平生。
             </div>
             <div class="poem-note">
                 <strong>🌿 解析（参考百度百科）：</strong><br>
-                元符三年（1100年），苏轼遇赦从海南岛渡海北归。此诗写于归途。前两句写深夜渡海，风雨终于停止，天空放晴。后两句以“云散月明”比喻政治污点被洗清，“天容海色本澄清”象征自己品格本自清白。全诗境界开阔，情感昂扬，是苏轼晚年乐观精神的写照。
+                元符三年（1100年），苏轼遇赦从海南岛渡海北归。此诗写于归途。前两句写深夜渡海，风雨终于停止，天空放晴。三、四句以“云散月明”比喻政治污点被洗清，“天容海色本澄清”象征自己品格本自清白。末联“九死南荒吾不恨，兹游奇绝冠平生”更是将苦难视为奇绝经历，体现了苏轼晚年超然物外的境界。
             </div>
         </div>
 
-        <div style="margin-top: 40px; text-align: center; font-size: 1rem; color: #9b7b54; padding: 20px 0 10px;">
+        <div style="margin-top: 50px; text-align: center; font-size: 1.1rem; color: #9b7b54; padding: 20px 0;">
             🌟 微课《定风波》拓展阅读 · 像苏轼一样，从容面对人生风雨
         </div>
     </div>
