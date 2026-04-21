@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>苏轼 · 经典诗词与生平</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f2efe9;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'SimHei', serif;
+            padding: 20px 15px 40px;
+            color: #2c2418;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fffef7;
+            border-radius: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #e2d8ca;
+        }
+        .header {
+            background: linear-gradient(135deg, #d9c7a7 0%, #b89a6e 100%);
+            padding: 28px 20px;
+            text-align: center;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+        .header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        .content {
+            padding: 28px 22px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #9b7b54;
+            border-left: 4px solid #cbb181;
+            padding-left: 15px;
+            margin: 30px 0 20px 0;
+        }
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+        .poem-card {
+            background: #fefcf8;
+            border: 1px solid #e8dfd1;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin-bottom: 24px;
+            transition: all 0.2s;
+        }
+        .poem-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #7a5a3a;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+        .poem-dynasty {
+            font-size: 0.7rem;
+            color: #b28b5e;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .poem-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #3e3324;
+            white-space: pre-line;
+            margin-bottom: 12px;
+            font-family: inherit;
+        }
+        .poem-note {
+            font-size: 0.85rem;
+            color: #8f7a60;
+            background: #f9f5ed;
+            padding: 10px 14px;
+            border-radius: 16px;
+            border-left: 3px solid #d9c7a7;
+            margin-top: 10px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+            border-left: 2px solid #d4c3aa;
+            margin: 20px 0 20px;
+        }
+        .event {
+            margin-bottom: 22px;
+            position: relative;
+        }
+        .event::before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background: #b28b5e;
+            border-radius: 50%;
+            border: 2px solid #fffef7;
+            box-shadow: 0 0 0 2px #b28b5e;
+        }
+        .year {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #9b7b54;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        .desc {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #3e3324;
+            text-align: justify;
+        }
+        .quote {
+            background: #f9f5ed;
+            padding: 18px 20px;
+            border-radius: 28px;
+            margin: 30px 0 10px;
+            text-align: center;
+            font-style: italic;
+            color: #6b4e2e;
+            font-size: 0.9rem;
+            border-left: 4px solid #cbb181;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.7rem;
+            color: #9b8a72;
+            border-top: 1px solid #ede3d4;
+            background: #fefcf8;
+        }
+        @media (max-width: 550px) {
+            .content {
+                padding: 20px 16px;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .poem-text {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>苏轼 · 经典诗词选读</h1>
+        <p>人生如逆旅，我亦是行人</p>
+    </div>
+    <div class="content">
+        <!-- 诗词板块 -->
+        <div class="section-title">📖 经典诗词</div>
+
+        <!-- 望江南·春未老（必须包含） -->
+        <div class="poem-card">
+            <div class="poem-title">《望江南·春未老》</div>
+            <div class="poem-dynasty">宋 · 苏轼</div>
+            <div class="poem-text">
+                春未老，风细柳斜斜。<br>
+                试上超然台上看，半壕春水一城花。<br>
+                烟雨暗千家。<br>
+                寒食后，酒醒却咨嗟。<br>
+                休对故人思故国，且将新火试新茶。<br>
+                诗酒趁年华。
+            </div>
+            <div class="poem-note">💡 注释：春天还没过去，微风吹拂着柳枝。登上超然台远望，春水与繁花尽收眼底。不要总思念过去，用新火煮新茶，趁着大好年华诗意生活吧！</div>
+        </div>
+
+        <div class="poem-card">
+            <div class="poem-title">《饮湖上初晴后雨》</div>
+            <div class="poem-dynasty">宋 · 苏轼</div>
+            <div class="poem-text">
+                水光潋滟晴方好，山色空蒙雨亦奇。<br>
+                欲把西湖比西子，淡妆浓抹总相宜。
+            </div>
+            <div class="poem-note">💡 注释：西湖晴天波光粼粼，雨天山色迷蒙，都很美。就像美女西施，无论淡妆还是浓妆都合适。学会欣赏不同景色的美。</div>
+        </div>
+
+        <div class="poem-card">
+            <div class="poem-title">《题西林壁》</div>
+            <div class="poem-dynasty">宋 · 苏轼</div>
+            <div class="poem-text">
+                横看成岭侧成峰，远近高低各不同。<br>
+                不识庐山真面目，只缘身在此山中。
+            </div>
+            <div class="poem-note">💡 启示：从不同角度看庐山，形状各不相同。为什么看不清真面目？因为自己身在庐山之中。告诉我们看问题要全面，跳出局限。</div>
+        </div>
+
+        <div class="poem-card">
+            <div class="poem-title">《惠崇春江晚景》</div>
+            <div class="poem-dynasty">宋 · 苏轼</div>
+            <div class="poem-text">
+                竹外桃花三两枝，春江水暖鸭先知。<br>
+                蒌蒿满地芦芽短，正是河豚欲上时。
+            </div>
+            <div class="poem-note">💡 观察自然：竹林外桃花初放，鸭子最先知道江水变暖。鼓励我们留心观察生活中的细微变化。</div>
+        </div>
+
+        <div class="poem-card">
+            <div class="poem-title">《六月二十日夜渡海》</div>
+            <div class="poem-dynasty">宋 · 苏轼</div>
+            <div class="poem-text">
+                参横斗转欲三更，苦雨终风也解晴。<br>
+                云散月明谁点缀？天容海色本澄清。
+            </div>
+            <div class="poem-note">💡 乐观精神：风雨再大也总会放晴，云散月明，天空和大海本来就是清澈的。困境中要保持希望。</div>
+        </div>
+
+        <!-- 生平时间线（适合中小学生） -->
+        <div class="section-title">📜 苏轼的一生</div>
+        <div class="timeline">
+            <div class="event">
+                <div class="year">1037年</div>
+                <div class="desc">生于四川眉山，从小聪慧，父亲苏洵亲自教导。</div>
+            </div>
+            <div class="event">
+                <div class="year">1057年</div>
+                <div class="desc">21岁考中进士，主考官欧阳修非常赏识他。</div>
+            </div>
+            <div class="event">
+                <div class="year">1071年</div>
+                <div class="desc">因反对变法，自请到杭州做官，体察民情。</div>
+            </div>
+            <div class="event">
+                <div class="year">1074年</div>
+                <div class="desc">任密州知州，修建超然台，写下《望江南·春未老》。</div>
+            </div>
+            <div class="event">
+                <div class="year">1079年</div>
+                <div class="desc">“乌台诗案”被贬黄州，人生最低谷，却创作出最好的作品。</div>
+            </div>
+            <div class="event">
+                <div class="year">1082年</div>
+                <div class="desc">在黄州写下《定风波》《赤壁赋》《念奴娇·赤壁怀古》。</div>
+            </div>
+            <div class="event">
+                <div class="year">1089年</div>
+                <div class="desc">再次到杭州，疏浚西湖，修筑苏堤，造福百姓。</div>
+            </div>
+            <div class="event">
+                <div class="year">1094年</div>
+                <div class="desc">被贬惠州（广东），依然关心民生，传播文化。</div>
+            </div>
+            <div class="event">
+                <div class="year">1097年</div>
+                <div class="desc">再贬儋州（海南），开馆教学，培养了许多学生。</div>
+            </div>
+            <div class="event">
+                <div class="year">1101年</div>
+                <div class="desc">遇赦北归，途中病逝于常州。临终说：“问汝平生功业，黄州惠州儋州”。</div>
+            </div>
+        </div>
+
+        <div class="quote">
+            “莫听穿林打叶声，何妨吟啸且徐行。<br>
+            竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。”
+        </div>
+        <div class="quote" style="background:#fff; border-left-color:#d9c7a7;">
+            🌟 微课《定风波》拓展阅读 · 像苏轼一样，从容面对人生风雨
+        </div>
+    </div>
+    <div class="footer">
+        扫码获取更多苏轼诗词 · 适合中小学生阅读<br>
+        资料来源：《苏轼诗集》《宋史》
+    </div>
+</div>
+</body>
+</html>
